@@ -1,0 +1,13 @@
+---
+
+version: '3.7'
+services:
+  rover:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+    command: python -m unittest
+    stdin_open: true
+    tty: true
