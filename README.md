@@ -7,6 +7,12 @@
 the rover stays where it is if it tries to go through a "wall".
 2. Ignore multiple rovers crossing over each other to keep problem simple.
 
+
+## Output differences from problem specification
+
+I used an enum to represent direction and I chose to print the entire enum on output rather than just the cardinal
+letter for the direction. Thus rover output prints as `5 5 Direction.N` rather than `5 5 N` as per the specification.
+
 ## How to run
 
 Project can be run stand alone (it has no external dependencies), but I built it using Docker and docker-compose.
