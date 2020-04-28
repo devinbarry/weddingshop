@@ -27,3 +27,11 @@ Running the example inputs can be done as follows:
 
 Alternatively you can specify the command in full as 
 `docker-compose run rover python -m unittest`
+
+
+## Further work
+
+The obvious next step is to consider rovers crossing each other. I would refactor to create a `Plateau` class that
+took the initial grid configuration and contained a list/set of rovers on the plateau. Each rover move or new rover
+init would need to go through this plateau class. I would check the positions of all rovers on the plateau and do
+some action (error or prevent move) if rovers init on top of each other or try to move into each other.
