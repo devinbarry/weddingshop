@@ -27,3 +27,10 @@ class TestClosedOrders(TestCase):
         self.assertEqual(str(sim), "0 0 Direction.N")
         sim.command("MMMMM")  # Move 5 spaces in the postive y direction
         self.assertEqual(str(sim), "0 5 Direction.N")
+
+    def test_smallest_grid(self):
+        # This config dissallows the rover from moving
+        sim = RoverSim(0, 0, Direction.N, 0, 0)
+        self.assertEqual(str(sim), "0 0 Direction.N")
+        sim.command("MMMMM")  # Move 5 spaces in the postive y direction
+        self.assertEqual(str(sim), "0 0 Direction.N")
